@@ -16,6 +16,58 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `campeonato`
+--
+
+DROP TABLE IF EXISTS `campeonato`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `campeonato` (
+  `codCampeonato` int(11) NOT NULL AUTO_INCREMENT,
+  `inicio` date DEFAULT NULL,
+  `fim` date DEFAULT NULL,
+  `timeVencedor` int(11) DEFAULT NULL,
+  `artilheiro` int(11) DEFAULT NULL,
+  PRIMARY KEY (`codCampeonato`),
+  KEY `fk_campeonato_timeVencedor` (`timeVencedor`),
+  KEY `fk_campeonato` (`artilheiro`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `campeonato`
+--
+
+LOCK TABLES `campeonato` WRITE;
+/*!40000 ALTER TABLE `campeonato` DISABLE KEYS */;
+/*!40000 ALTER TABLE `campeonato` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cartao`
+--
+
+DROP TABLE IF EXISTS `cartao`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `cartao` (
+  `codPartida` int(11) DEFAULT NULL,
+  `tempoDaPartida` date DEFAULT NULL,
+  `jogador` int(11) DEFAULT NULL,
+  KEY `fk_cartao_partida` (`jogador`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cartao`
+--
+
+LOCK TABLES `cartao` WRITE;
+/*!40000 ALTER TABLE `cartao` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cartao` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `clube`
 --
 
@@ -68,6 +120,30 @@ LOCK TABLES `contrato` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `estadio`
+--
+
+DROP TABLE IF EXISTS `estadio`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `estadio` (
+  `codEstadio` int(11) NOT NULL AUTO_INCREMENT,
+  `cidade` varchar(30) DEFAULT NULL,
+  `capacidadeMax` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`codEstadio`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estadio`
+--
+
+LOCK TABLES `estadio` WRITE;
+/*!40000 ALTER TABLE `estadio` DISABLE KEYS */;
+/*!40000 ALTER TABLE `estadio` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `gol`
 --
 
@@ -75,10 +151,10 @@ DROP TABLE IF EXISTS `gol`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `gol` (
-  `codPartida` varchar(30) NOT NULL,
-  `tempoDePartida` time NOT NULL,
-  `jogadorGol` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`codPartida`)
+  `codPartida` int(11) DEFAULT NULL,
+  `tempoDaPartida` date DEFAULT NULL,
+  `jogador` int(11) DEFAULT NULL,
+  KEY `fk_cartao_partida` (`jogador`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -120,6 +196,61 @@ LOCK TABLES `jogador` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `partida`
+--
+
+DROP TABLE IF EXISTS `partida`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `partida` (
+  `codPartida` int(11) NOT NULL AUTO_INCREMENT,
+  `dataDaPartida` date DEFAULT NULL,
+  `timeCasa` int(11) DEFAULT NULL,
+  `timeVisitante` int(11) DEFAULT NULL,
+  `estadio` int(11) DEFAULT NULL,
+  PRIMARY KEY (`codPartida`),
+  KEY `fk_partida_timeCasa` (`timeCasa`),
+  KEY `fk_partida_timeVisitante` (`timeVisitante`),
+  KEY `fk_partida_estadio` (`estadio`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `partida`
+--
+
+LOCK TABLES `partida` WRITE;
+/*!40000 ALTER TABLE `partida` DISABLE KEYS */;
+/*!40000 ALTER TABLE `partida` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `registro_campeonato`
+--
+
+DROP TABLE IF EXISTS `registro_campeonato`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `registro_campeonato` (
+  `anoCampeonato` date NOT NULL,
+  `clube` int(11) DEFAULT NULL,
+  `campeonato` int(11) DEFAULT NULL,
+  PRIMARY KEY (`anoCampeonato`),
+  KEY `fk_registro_clube` (`clube`),
+  KEY `fk_registro_campeonato` (`campeonato`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `registro_campeonato`
+--
+
+LOCK TABLES `registro_campeonato` WRITE;
+/*!40000 ALTER TABLE `registro_campeonato` DISABLE KEYS */;
+/*!40000 ALTER TABLE `registro_campeonato` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping routines for database 'campeonatodefutebol'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -132,4 +263,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-24 11:54:39
+-- Dump completed on 2019-11-24 14:07:11
