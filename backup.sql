@@ -130,8 +130,9 @@ CREATE TABLE `estadio` (
   `codEstadio` int(11) NOT NULL AUTO_INCREMENT,
   `cidade` varchar(30) DEFAULT NULL,
   `capacidadeMax` varchar(30) DEFAULT NULL,
+  `nome` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`codEstadio`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,6 +141,7 @@ CREATE TABLE `estadio` (
 
 LOCK TABLES `estadio` WRITE;
 /*!40000 ALTER TABLE `estadio` DISABLE KEYS */;
+INSERT INTO `estadio` VALUES (1,'Belo Horizonte','23018','Independencia'),(2,'Curitiba','42370','Arena da Baixada'),(3,'Salvador','50025','Arena Fonte Nova'),(4,'Rio de Janeiro','44661','Nilton Santos'),(5,'Fortaleza','63903','Arena da Baixada'),(6,'Chapeco','20089','Arena Condá'),(7,'Sao Paulo','47605','Arena Corinthians'),(8,'Belo Horizonte','61846','Mineirao'),(9,'Rio de Janeiro','78838','Maracanã'),(10,'Porto Alegre','55662','Arena do Grêmio'),(11,'Porto Alegre','50128','Beira-Rio'),(12,'São Paulo','43713','Allianz Parque'),(13,'Curitiba','20083','Vila Capanema'),(14,'Santos','16068','Vila Belmiro'),(15,'São Paulo','72039','Morumbi'),(16,'Recife','32983','Ilha do Retiro'),(17,'Rio de Janeiro','21680','São Januário'),(18,'Bahia','30618','Barradão');
 /*!40000 ALTER TABLE `estadio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,4 +265,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-24 14:07:11
+-- Dump completed on 2019-11-24 18:33:05
