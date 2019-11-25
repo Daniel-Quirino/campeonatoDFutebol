@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`campeonato` (
   `artilheiro` INT(11) NULL DEFAULT NULL,
   `nome` VARCHAR(45) NULL,
   PRIMARY KEY (`codCampeonato`),
-  INDEX `fk_campeonato_timeVencedor` (`timeVencedor` ASC) VISIBLE,
-  INDEX `fk_campeonato` (`artilheiro` ASC) VISIBLE)
+  INDEX `fk_campeonato_timeVencedor` (`timeVencedor` ASC),
+  INDEX `fk_campeonato` (`artilheiro` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = latin1;
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`cartao` (
   `tempoDaPartida` DATE NOT NULL,
   `partida_codPartida` INT(11) NOT NULL,
   `jogador_codJogador` INT(11) NOT NULL,
-  INDEX `fk_cartao_jogador1_idx` (`jogador_codJogador` ASC) VISIBLE,
+  INDEX `fk_cartao_jogador1_idx` (`jogador_codJogador` ASC),
   PRIMARY KEY (`tempoDaPartida`, `partida_codPartida`, `jogador_codJogador`))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = latin1;
@@ -73,7 +73,7 @@ DROP TABLE IF EXISTS `CampeonadodeFutebol`.`clube_casa` ;
 
 CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`clube_casa` (
   `clube_CNPJ` FLOAT NOT NULL,
-  INDEX `fk_clube_visitante_clube1_idx` (`clube_CNPJ` ASC) VISIBLE,
+  INDEX `fk_clube_visitante_clube1_idx` (`clube_CNPJ` ASC),
   PRIMARY KEY (`clube_CNPJ`),
   CONSTRAINT `fk_clube_visitante_clube10`
     FOREIGN KEY (`clube_CNPJ`)
@@ -90,7 +90,7 @@ DROP TABLE IF EXISTS `CampeonadodeFutebol`.`clube_visitante` ;
 
 CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`clube_visitante` (
   `clube_CNPJ` FLOAT NOT NULL,
-  INDEX `fk_clube_visitante_clube1_idx` (`clube_CNPJ` ASC) VISIBLE,
+  INDEX `fk_clube_visitante_clube1_idx` (`clube_CNPJ` ASC),
   PRIMARY KEY (`clube_CNPJ`),
   CONSTRAINT `fk_clube_visitante_clube1`
     FOREIGN KEY (`clube_CNPJ`)
@@ -112,8 +112,8 @@ CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`contrato` (
   `clube_CNPJ` FLOAT NOT NULL,
   `jogador_codJogador` INT(11) NOT NULL,
   PRIMARY KEY (`codContrato`, `jogador_codJogador`, `clube_CNPJ`),
-  INDEX `fk_contrato_clube1_idx` (`clube_CNPJ` ASC) VISIBLE,
-  INDEX `fk_contrato_jogador1_idx` (`jogador_codJogador` ASC) VISIBLE)
+  INDEX `fk_contrato_clube1_idx` (`clube_CNPJ` ASC),
+  INDEX `fk_contrato_jogador1_idx` (`jogador_codJogador` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = latin1;
 
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`gol` (
   `partida_codPartida` INT(11) NOT NULL,
   `jogador_codJogador` INT(11) NOT NULL,
   PRIMARY KEY (`partida_codPartida`, `tempoDaPartida`, `jogador_codJogador`),
-  INDEX `fk_gol_jogador1_idx` (`jogador_codJogador` ASC) VISIBLE,
+  INDEX `fk_gol_jogador1_idx` (`jogador_codJogador` ASC),
   CONSTRAINT `fk_gol_partida1`
     FOREIGN KEY (`partida_codPartida`)
     REFERENCES `CampeonadodeFutebol`.`partida` (`codPartida`)
@@ -189,9 +189,9 @@ CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`partida` (
   `clube_visitante_clube_CNPJ` FLOAT NOT NULL,
   `clube_casa_clube_CNPJ` FLOAT NOT NULL,
   PRIMARY KEY (`codPartida`, `clube_visitante_clube_CNPJ`, `clube_casa_clube_CNPJ`),
-  INDEX `fk_partida_estadio1_idx` (`estadio_codEstadio` ASC) VISIBLE,
-  INDEX `fk_partida_clube_visitante1_idx` (`clube_visitante_clube_CNPJ` ASC) VISIBLE,
-  INDEX `fk_partida_clube_casa1_idx` (`clube_casa_clube_CNPJ` ASC) VISIBLE)
+  INDEX `fk_partida_estadio1_idx` (`estadio_codEstadio` ASC),
+  INDEX `fk_partida_clube_visitante1_idx` (`clube_visitante_clube_CNPJ` ASC),
+  INDEX `fk_partida_clube_casa1_idx` (`clube_casa_clube_CNPJ` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = latin1;
 
@@ -207,8 +207,8 @@ CREATE TABLE IF NOT EXISTS `CampeonadodeFutebol`.`registro_campeonato` (
   `anoCampeonato` DATE NULL,
   `num_registroCampeonato` INT NOT NULL,
   `registro_campeonatocol` VARCHAR(45) NULL,
-  INDEX `fk_clube_has_campeonato_campeonato1_idx` (`campeonato_codCampeonato` ASC) VISIBLE,
-  INDEX `fk_clube_has_campeonato_clube_idx` (`clube_CNPJ` ASC) VISIBLE,
+  INDEX `fk_clube_has_campeonato_campeonato1_idx` (`campeonato_codCampeonato` ASC),
+  INDEX `fk_clube_has_campeonato_clube_idx` (`clube_CNPJ` ASC),
   PRIMARY KEY (`num_registroCampeonato`, `clube_CNPJ`, `campeonato_codCampeonato`),
   CONSTRAINT `fk_clube_has_campeonato_clube`
     FOREIGN KEY (`clube_CNPJ`)
