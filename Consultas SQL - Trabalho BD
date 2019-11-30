@@ -1,0 +1,47 @@
+Consultas SQL - Trabalho - 10 consultas
+
+- Consultas de seleção e projeção
+
+	1 - Lista todos os jogadores cadastrados no banco de dados e exibe suas informações como, por exemplo, posição, nome, 		altura, peso etc. Como variação da consulta, é feito um filtro para selecionar somente jogadores com altura maior que 		1,75.
+	
+	1.1 - SELECT primeiroNome,sobrenome,altura,peso,dataNascimento FROM jogador;
+	
+	1.2 - SELECT primeiroNome,sobrenome,altura,peso,dataNascimento FROM jogador WHERE altura > 1.75;
+	
+	2 - Lista todos os estádios cadastrados no banco de dados e exibe suas informações como, por exemplo, sua cidade, 		capacidade máxima e nome do estádio. Como variação da consulta, um filtro é feito para retornar somente estádios com 		capacidade maior que 45000.
+	
+	2.1 - SELECT cidade,capacidadeMax,nome FROM estadio;
+	
+	2.2 - SELECT cidade,capacidadeMax,nome FROM estadio WHERE capacidadeMax > 45000;
+
+- Consultas que envolvem a junção de duas relações
+
+	1 - Lista todas as partidas de um determinado campeonato, o estádio em que ela ocorreu e respectivas informações como a 	data da partida, cidade, e nome do estádio em que aquela partida ocorreu. Como variação da consulta, ao invés de utilizar o INNER JOIN que já busca os registros segregados pela condição informada, é utilizado o CROSS JOIN que é o produto cartesiano entre as tuplas das tabelas, então, após o produto cartesiano, os registros são filtrados.
+	
+	1.1 - SELECT nome,cidade,dataDaPartida FROM partida JOIN estadio ON estadio_codEstadio=codEstadio AND nome='Mineirão';
+	
+	1.2 - SELECT nome,cidade,dataDaPartida FROM partida CROSS JOIN estadio WHERE estadio_codEstadio=codEstadio AND 		 nome='Mineirão';
+	
+	2 - Lista os jogadores que foram arilheiros em algum campeonato, listando suas informações como nome,posição e a quantidade de gols marcados que resultou nessa determinada artilharia. Como variação para a consulta, é feita a troca na posição das tabelas no momento de sua junção.
+	
+	2.1 - SELECT primeiroNome,sobrenome,posicao,qnt_Gols FROM artilheiro AS a JOIN jogador AS j ON a.jogador=j.codJogador; 
+	
+	2.2 - SELECT primeiroNome,sobrenome,posicao,qnt_Gols FROM jogador AS j JOIN artilheiro AS a ON a.jogador=j.codJogador; 
+	
+	3 - Lista todos os gols registrados no banco de dados, assim como a partida e sua data correspondente. Como variação da consulta. Como variação da consulta, ao invés de utilizar o INNER JOIN que já busca os registros segregados pela condição informada, é utilizado o CROSS JOIN que é o produto cartesiano entre as tuplas das tabelas, então, após o produto cartesiano, os registros são filtrados.
+	
+	3.1 - SELECT codPartida,dataDaPartida,tempoDaPartida FROM gol JOIN partida ON partida_codPartida=codPartida;
+	
+	3.2 - SELECT codPartida,dataDaPartida,tempoDaPartida FROM gol CROSS JOIN partida WHERE partida_codPartida=codPartida;
+
+- Consultas que envolvem a junção de três ou mais relações
+
+	1 - Listar o nome de todos os jogadores que atuam no clube Cruzeiro. Como variação da consulta, alterei a ordem das tabelas na composição das junções.
+	
+	1.1 - SELECT j.primeiroNome,j.sobrenome FROM contrato AS k JOIN clube AS c ON k.clube_CNPJ=c.CNPJ JOIN jogador AS j ON k.jogador_codJogador=j.codJogador WHERE c.nome='Cruzeiro';
+	
+	1.2 - SELECT j.primeiroNome,j.sobrenome FROM clube AS c JOIN contrato AS k ON k.clube_CNPJ=c.CNPJ JOIN jogador AS j ON k.jogador_codJogador=j.codJogador WHERE c.nome='Cruzeiro';
+	
+	2 - Listar o nome de todos os clubes e seus estádios sede, registrados no campeonato chamado: Campeonato Brasileiro.
+	
+	2.1 - SELECT c.nome,e.nome FROM registro_campeonato AS r JOIN clube AS c ON r.clube_CNPJ=c.CNPJ JOIN campeonato AS k ON campeonato_codCampeonato=codCampeonato JOIN estadio AS e ON e.codEstadio=c.estadioSede WHERE k.nome='Campeonato Brasileiro';
