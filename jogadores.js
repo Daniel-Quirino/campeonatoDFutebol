@@ -984,69 +984,69 @@ novaTabela.map(jogaInfo => {
 
     switch(jogaInfo[1]) {
         case '"Atlético-MG"' :
-            jogaInfo[1] = 1;
+            jogaInfo[1] = 17218000000000;
             break;
         case '"Atlético-PR"' :
-            jogaInfo[1] = 2;
+            jogaInfo[1] = 76710600000000;
             break;
         case '"Bahia"' :
-                jogaInfo[1] = 3;
+                jogaInfo[1] = 7525950000000;
                 break;
         case '"Botafogo"' :
-            jogaInfo[1] = 4;
+            jogaInfo[1] = 34029600000000;
             break;
         case '"Ceará"' :
-                jogaInfo[1] = 5;
+                jogaInfo[1] = 7369230000000;
                 break;
         case '"Chapecoense"' :
-            jogaInfo[1] = 6;
+            jogaInfo[1] = 83018800000000;
             break;
         case '"Corinthians"' :
-                jogaInfo[1] = 7;
+                jogaInfo[1] = 61902700000000;
                 break;
         case '"Cruzeiro"' :
-            jogaInfo[1] = 8;
+            jogaInfo[1] = 17241900000000;
             break;
         case '"Flamengo"' :
-                jogaInfo[1] = 9;
+                jogaInfo[1] = 33649600000000;
                 break;
         case '"Grêmio"' :
-            jogaInfo[1] = 10;
+            jogaInfo[1] = 92797900000000;
             break;
         case '"Internacional"' :
-                jogaInfo[1] = 11;
+                jogaInfo[1] = 105027000000;
                 break;
         case '"Palmeiras"' :
-            jogaInfo[1] = 12;
+            jogaInfo[1] = 61750300000000;
             break;
         case '"Paraná"' :
-                jogaInfo[1] = 13;
+                jogaInfo[1] = 81907400000000;
                 break;
         case '"Santos"' :
-                jogaInfo[1] = 14;
+                jogaInfo[1] = 58196700000000;
                 break;
         case '"São Paulo"' :
-            jogaInfo[1] = 15;
+            jogaInfo[1] = 60518000000000;
             break;
         case '"Sport"' :
-                jogaInfo[1] = 16;
+                jogaInfo[1] = 58986100000000;
                 break;
         case '"Vasco"' :
-            jogaInfo[1] = 17
+            jogaInfo[1] = 33617500000000;
             break;
         case '"Vitória"' :
-                jogaInfo[1] = 18;
+                jogaInfo[1] = 15217000000000;
                 break;
         case '"América-MG"' :
-                jogaInfo[1] = 1;
+                jogaInfo[1] = 33014600000000;
                 break;
         case '"Fluminense"' :
-                jogaInfo[1] = 19;
+                jogaInfo[1] = 33647600000000;
                 break;
         default:
-                jogaInfo[1] = 0;
-                
-                                                                                                                                }
+                jogaInfo[1] = 0; 
+    }
+
     consulta += "(" + jogaInfo[0] + ',' + jogaInfo[1] + ',' + jogaInfo[2] + "),";
 })
 
