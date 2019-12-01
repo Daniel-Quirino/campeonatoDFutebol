@@ -28,11 +28,9 @@ CREATE TABLE `artilheiro` (
   `jogador` int(11) NOT NULL,
   `qnt_Gols` int(11) NOT NULL,
   `campeonato` int(11) NOT NULL,
-  PRIMARY KEY (`jogador`,`campeonato`),
   KEY `fk_artilheiro_2_idx` (`campeonato`),
-  CONSTRAINT `fk_artilheiro_1` FOREIGN KEY (`jogador`) REFERENCES `jogador` (`codJogador`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_artilheiro_2` FOREIGN KEY (`campeonato`) REFERENCES `campeonato` (`codCampeonato`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `fk_artilheiro_1` (`jogador`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +39,7 @@ CREATE TABLE `artilheiro` (
 
 LOCK TABLES `artilheiro` WRITE;
 /*!40000 ALTER TABLE `artilheiro` DISABLE KEYS */;
+INSERT INTO `artilheiro` VALUES (302,18,1);
 /*!40000 ALTER TABLE `artilheiro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,11 +54,11 @@ CREATE TABLE `campeonato` (
   `codCampeonato` int(11) NOT NULL AUTO_INCREMENT,
   `inicio` date DEFAULT NULL,
   `fim` date DEFAULT NULL,
-  `timeVencedor` int(11) DEFAULT NULL,
-  `nome` varchar(45) DEFAULT NULL,
+  `timeVencedor` float DEFAULT NULL,
+  `nome` char(60) DEFAULT NULL,
   PRIMARY KEY (`codCampeonato`),
   KEY `fk_campeonato_timeVencedor` (`timeVencedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,6 +67,7 @@ CREATE TABLE `campeonato` (
 
 LOCK TABLES `campeonato` WRITE;
 /*!40000 ALTER TABLE `campeonato` DISABLE KEYS */;
+INSERT INTO `campeonato` VALUES (1,'2018-12-08','2018-04-27',61750300000000,'Campeonato Brasileiro de Futebol de 2018 - Série A');
 /*!40000 ALTER TABLE `campeonato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -358,4 +358,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-01 15:27:25
+-- Dump completed on 2019-12-01 16:35:59
