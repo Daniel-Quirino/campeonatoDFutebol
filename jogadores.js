@@ -1001,7 +1001,7 @@ novaTabela.map(jogaInfo => {
         case '"Chapecoense"' :
             jogaInfo[1] = 6;
             break;
-        case '"Corinthias"' :
+        case '"Corinthians"' :
                 jogaInfo[1] = 7;
                 break;
         case '"Cruzeiro"' :
@@ -1031,21 +1031,23 @@ novaTabela.map(jogaInfo => {
         case '"Sport"' :
                 jogaInfo[1] = 16;
                 break;
-        case '"Vasco da Gama"' :
+        case '"Vasco"' :
             jogaInfo[1] = 17
             break;
         case '"Vitória"' :
                 jogaInfo[1] = 18;
+                break;
+        case '"América-MG"' :
+                jogaInfo[1] = 1;
+                break;
+        case '"Fluminense"' :
+                jogaInfo[1] = 19;
                 break;
         default:
                 jogaInfo[1] = 0;
                 
                                                                                                                                 }
     consulta += "(" + jogaInfo[0] + ',' + jogaInfo[1] + ',' + jogaInfo[2] + "),";
-
 })
 
 console.log(consulta);
-
-
-// console.log(novaTabela);
