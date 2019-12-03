@@ -1,184 +1,5 @@
 let jogadores = 
-`1,1,14/04/2018 - 16:00,Cruzeiro - MG,0 x 1,Grêmio - RS,Correto
-2,1,15/04/2018 - 19:00,Atlético - PR,5 x 1,Chapecoense - SC,Correto
-3,1,15/04/2018 - 11:00,América - MG,3 x 0,Sport - PE,Correto
-4,1,14/04/2018 - 19:00,Vitória - BA,2 x 2,Flamengo - RJ,Correto
-5,1,15/04/2018 - 16:00,Vasco da Gama - RJ,2 x 1,Atlético - MG,Correto
-6,1,16/04/2018 - 20:00,Botafogo - RJ,1 x 1,Palmeiras - SP,Correto
-7,1,16/04/2018 - 20:00,São Paulo - SP,1 x 0,Paraná - PR,Correto
-8,1,14/04/2018 - 21:00,Santos - SP,2 x 0,Ceará - CE,Correto
-9,1,15/04/2018 - 16:00,Corinthians - SP,2 x 1,Fluminense - RJ,Correto
-10,1,15/04/2018 - 16:00,Internacional - RS,2 x 0,Bahia - BA,Correto
-11,2,22/04/2018 - 16:00,Atlético - MG,2 x 1,Vitória - BA,Correto
-12,2,22/04/2018 - 11:00,Paraná - PR,0 x 4,Corinthians - SP,Correto
-13,2,22/04/2018 - 16:00,Chapecoense - SC,1 x 1,Vasco da Gama - RJ,Correto
-14,2,21/04/2018 - 16:00,Bahia - BA,1 x 0,Santos - SP,Correto
-15,2,22/04/2018 - 16:00,Fluminense - RJ,1 x 0,Cruzeiro - MG,Correto
-16,2,21/04/2018 - 19:00,Flamengo - RJ,2 x 0,América - MG,Correto
-17,2,22/04/2018 - 16:00,Ceará - CE,0 x 0,São Paulo - SP,Correto
-18,2,23/04/2018 - 20:00,Sport - PE,1 x 1,Botafogo - RJ,Correto
-19,2,22/04/2018 - 16:00,Palmeiras - SP,1 x 0,Internacional - RS,Correto
-20,2,22/04/2018 - 19:00,Grêmio - RS,0 x 0,Atlético - PR,Correto
-21,3,29/04/2018 - 16:00,Atlético - MG,1 x 0,Corinthians - SP,Correto
-22,3,29/04/2018 - 16:00,Paraná - PR,1 x 2,Sport - PE,Correto
-23,3,30/04/2018 - 20:00,América - MG,2 x 1,Vitória - BA,Correto
-24,3,29/04/2018 - 16:00,Bahia - BA,0 x 0,Atlético - PR,Correto
-25,3,29/04/2018 - 16:00,Fluminense - RJ,1 x 1,São Paulo - SP,Correto
-26,3,28/04/2018 - 16:00,Botafogo - RJ,2 x 1,Grêmio - RS,Correto
-27,3,29/04/2018 - 16:00,Ceará - CE,0 x 3,Flamengo - RJ,Correto
-28,3,27/09/2018 - 16:00,Santos - SP,1 x 1,Vasco da Gama - RJ,Correto
-29,3,29/04/2018 - 16:00,Palmeiras - SP,0 x 0,Chapecoense - SC,Correto
-30,3,29/04/2018 - 19:00,Internacional - RS,0 x 0,Cruzeiro - MG,Correto
-31,4,06/05/2018 - 16:00,Cruzeiro - MG,1 x 0,Botafogo - RJ,Correto
-32,4,06/05/2018 - 16:00,Atlético - PR,1 x 3,Palmeiras - SP,Correto
-33,4,07/05/2018 - 20:00,Chapecoense - SC,1 x 1,Paraná - PR,Correto
-34,4,06/05/2018 - 16:00,Vitória - BA,1 x 2,Fluminense - RJ,Correto
-35,4,05/05/2018 - 19:00,Vasco da Gama - RJ,4 x 1,América - MG,Correto
-36,4,06/05/2018 - 16:00,Flamengo - RJ,2 x 0,Internacional - RS,Correto
-37,4,05/05/2018 - 19:00,São Paulo - SP,2 x 2,Atlético - MG,Correto
-38,4,06/05/2018 - 19:00,Sport - PE,2 x 0,Bahia - BA,Correto
-39,4,06/05/2018 - 11:00,Corinthians - SP,1 x 1,Ceará - CE,Correto
-40,4,06/05/2018 - 19:00,Grêmio - RS,5 x 1,Santos - SP,Correto
-41,5,13/05/2018 - 11:00,Cruzeiro - MG,2 x 0,Sport - PE,Correto
-42,5,13/05/2018 - 16:00,Atlético - PR,1 x 2,Atlético - MG,Correto
-43,5,13/05/2018 - 16:00,Chapecoense - SC,3 x 2,Flamengo - RJ,Correto
-44,5,13/05/2018 - 16:00,Bahia - BA,2 x 2,São Paulo - SP,Correto
-45,5,13/05/2018 - 16:00,Vasco da Gama - RJ,2 x 3,Vitória - BA,Correto
-46,5,14/05/2018 - 20:00,Botafogo - RJ,2 x 1,Fluminense - RJ,Correto
-47,5,14/05/2018 - 20:00,Ceará - CE,2 x 2,América - MG,Correto
-48,5,13/05/2018 - 19:00,Santos - SP,3 x 1,Paraná - PR,Correto
-49,5,13/05/2018 - 16:00,Corinthians - SP,1 x 0,Palmeiras - SP,Correto
-50,5,12/05/2018 - 16:00,Grêmio - RS,0 x 0,Internacional - RS,Correto
-51,6,19/05/2018 - 16:00,Atlético - MG,1 x 0,Cruzeiro - MG,Correto
-52,6,20/05/2018 - 16:00,Paraná - PR,0 x 0,Grêmio - RS,Correto
-53,6,20/05/2018 - 16:00,América - MG,1 x 0,Botafogo - RJ,Correto
-54,6,20/05/2018 - 11:00,Vitória - BA,2 x 1,Ceará - CE,Correto
-55,6,20/05/2018 - 19:00,Fluminense - RJ,2 x 0,Atlético - PR,Correto
-56,6,19/05/2018 - 19:00,Flamengo - RJ,1 x 1,Vasco da Gama - RJ,Correto
-57,6,20/05/2018 - 16:00,São Paulo - SP,1 x 0,Santos - SP,Correto
-58,6,20/05/2018 - 16:00,Sport - PE,1 x 1,Corinthians - SP,Correto
-59,6,19/05/2018 - 21:00,Palmeiras - SP,3 x 0,Bahia - BA,Correto
-60,6,21/05/2018 - 20:00,Internacional - RS,3 x 0,Chapecoense - SC,Correto
-61,7,26/05/2018 - 21:00,Atlético - MG,0 x 1,Flamengo - RJ,Correto
-62,7,27/05/2018 - 11:00,Paraná - PR,0 x 0,Atlético - PR,Correto
-63,7,27/05/2018 - 19:00,América - MG,1 x 3,São Paulo - SP,Correto
-64,7,27/05/2018 - 16:00,Bahia - BA,3 x 0,Vasco da Gama - RJ,Correto
-65,7,26/05/2018 - 16:00,Fluminense - RJ,3 x 1,Chapecoense - SC,Correto
-66,7,27/05/2018 - 16:00,Botafogo - RJ,1 x 1,Vitória - BA,Correto
-67,7,27/05/2018 - 19:00,Ceará - CE,0 x 1,Grêmio - RS,Correto
-68,7,27/05/2018 - 16:00,Santos - SP,0 x 1,Cruzeiro - MG,Correto
-69,7,26/05/2018 - 19:00,Palmeiras - SP,2 x 3,Sport - PE,Correto
-70,7,27/05/2018 - 16:00,Internacional - RS,2 x 1,Corinthians - SP,Correto
-71,8,30/05/2018 - 21:45,Cruzeiro - MG,1 x 0,Palmeiras - SP,Correto
-72,8,31/05/2018 - 21:00,Atlético - PR,2 x 0,Santos - SP,Correto
-73,8,30/05/2018 - 21:00,Chapecoense - SC,2 x 0,Ceará - CE,Correto
-74,8,30/05/2018 - 19:30,Vitória - BA,2 x 3,Internacional - RS,Correto
-75,8,30/05/2018 - 19:30,Vasco da Gama - RJ,1 x 0,Paraná - PR,Correto
-76,8,31/05/2018 - 16:00,Flamengo - RJ,2 x 0,Bahia - BA,Correto
-77,8,30/05/2018 - 21:00,São Paulo - SP,3 x 2,Botafogo - RJ,Correto
-78,8,30/05/2018 - 19:30,Sport - PE,3 x 2,Atlético - MG,Correto
-79,8,31/05/2018 - 18:00,Corinthians - SP,1 x 0,América - MG,Correto
-80,8,30/05/2018 - 21:45,Grêmio - RS,0 x 0,Fluminense - RJ,Correto
-81,9,02/06/2018 - 16:00,Atlético - MG,3 x 3,Chapecoense - SC,Correto
-82,9,04/06/2018 - 20:00,Paraná - PR,2 x 1,Fluminense - RJ,Correto
-83,9,03/06/2018 - 16:00,América - MG,3 x 1,Atlético - PR,Correto
-84,9,03/06/2018 - 16:00,Bahia - BA,0 x 2,Grêmio - RS,Correto
-85,9,02/06/2018 - 19:00,Vasco da Gama - RJ,1 x 2,Botafogo - RJ,Correto
-86,9,03/06/2018 - 16:00,Flamengo - RJ,1 x 0,Corinthians - SP,Correto
-87,9,03/06/2018 - 19:00,Ceará - CE,0 x 1,Cruzeiro - MG,Correto
-88,9,03/06/2018 - 16:00,Santos - SP,5 x 2,Vitória - BA,Correto
-89,9,02/06/2018 - 21:00,Palmeiras - SP,3 x 1,São Paulo - SP,Correto
-90,9,02/06/2018 - 16:00,Internacional - RS,0 x 0,Sport - PE,Correto
-91,10,06/06/2018 - 21:45,Cruzeiro - MG,1 x 1,Vasco da Gama - RJ,Correto
-92,10,07/06/2018 - 20:00,Paraná - PR,1 x 0,Bahia - BA,Correto
-93,10,07/06/2018 - 21:00,América - MG,1 x 3,Atlético - MG,Correto
-94,10,06/06/2018 - 19:30,Vitória - BA,1 x 0,Chapecoense - SC,Correto
-95,10,07/06/2018 - 20:00,Fluminense - RJ,0 x 2,Flamengo - RJ,Correto
-96,10,06/06/2018 - 19:30,Botafogo - RJ,0 x 0,Ceará - CE,Correto
-97,10,05/06/2018 - 21:30,São Paulo - SP,0 x 0,Internacional - RS,Correto
-98,10,06/06/2018 - 21:00,Sport - PE,1 x 0,Atlético - PR,Correto
-99,10,06/06/2018 - 21:00,Corinthians - SP,1 x 1,Santos - SP,Correto
-100,10,06/06/2018 - 21:45,Grêmio - RS,0 x 2,Palmeiras - SP,Correto
-201,21,25/08/2018 - 16:00,Santos - SP,2 x 0 ,Bahia - BA,Correto
-202,21,25/08/2018 - 19:00,Atlético - PR,2 x 1 ,Grêmio - RS,Correto
-203,21,25/08/2018 - 19:00,Corinthians - SP,1 x 0 ,Paraná - PR,Correto
-204,21,25/08/2018 - 21:00,Cruzeiro - MG,2 x 1,Fluminense - RJ,Correto
-205,21,25/08/2018 - 21:00,Botafogo - RJ,2 x 0,Sport - PE,Correto
-206,21,26/08/2018 - 11:00,São Paulo - SP,1 x 0,Ceará - CE,Correto
-207,21,27/08/2018 - 16:00,América - MG,2 x 2,Flamengo - RJ,Correto
-208,21,27/08/2018 - 16:00,Vitória - BA,1 x 0 ,Atlético - MG,Correto
-209,21,27/08/2018 - 19:00,Internacional - RS,0 x 0 ,Palmeiras - SP,Correto
-210,21,27/08/2018 - 19:00,Vasco da Gama - RJ,3 x 1,Chapecoense - SC,Correto
-211,22,01/09/2018 - 16:00,Vitória - BA,1 x 0,América - MG,Correto
-212,22,01/09/2018 - 16:00,Grêmio - RS,4 x 0,Botafogo - RJ,Correto
-213,22,01/09/2018 - 19:00,Vasco da Gama - RJ,0 x 3,Santos - SP,Correto
-214,22,01/09/2018 - 21:00,Corinthians - SP,1 x 1,Atlético - MG,Correto
-215,22,02/09/2018 - 11:00,Flamengo - RJ,1 x 1,Ceará - CE,Correto
-216,22,02/09/2018 - 16:00,Atlético - PR,2 x 0,Bahia - BA,Correto
-217,22,02/09/2018 - 16:00,São Paulo - SP,1 x 1,Fluminense - RJ,Correto
-218,22,02/09/2018 - 16:00,Sport - PE,1 x 0,Paraná - PR,Correto
-219,22,02/09/2018 - 19:00,Cruzeiro - MG,0 x 0,Internacional - RS,Correto
-220,22,02/09/2018 - 19:00,Chapecoense - SC,1 x 2,Palmeiras - SP,Correto
-221,23,05/09/2018 - 19:30,Bahia - BA,2 x 0,Sport - PE,Correto
-222,23,05/09/2018 - 19:30,Botafogo - RJ,1 x 1,Cruzeiro - MG,Correto
-223,23,05/09/2018 - 20:00,Ceará - CE,2 x 1,Corinthians - SP,Correto
-224,23,05/09/2018 - 21:00,Paraná - PR,1 x 1,Chapecoense - SC,Correto
-225,23,05/09/2018 - 21:00,Palmeiras - SP,2 x 0,Atlético - PR,Correto
-226,23,05/09/2018 - 21:45,Atlético - MG,1 x 0,São Paulo - SP,Correto
-227,23,05/09/2018 - 21:45,Internacional - RS,2 x 1,Flamengo - RJ,Correto
-228,23,06/09/2018 - 19:00,Fluminense - RJ,0 x 0,Vitória - BA,Correto
-229,23,06/09/2018 - 19:00,Santos - SP,0 x 0,Grêmio - RS,Correto
-230,23,06/09/2018 - 20:00,América - MG,2 x 1,Vasco da Gama - RJ,Correto
-231,24,08/09/2018 - 16:00,Sport - PE,0 x 0,Cruzeiro - MG,Correto
-232,24,08/09/2018 - 19:00,São Paulo - SP,1 x 0,Bahia - BA,Correto
-233,24,08/09/2018 - 21:00,Flamengo - RJ,2 x 0,Chapecoense - SC,Correto
-234,24,09/09/2018 - 16:00,América - MG,0 x 0,Ceará - CE,Correto
-235,24,09/09/2018 - 16:00,Fluminense - RJ,1 x 0 ,Botafogo - RJ,Correto
-236,24,09/09/2018 - 16:00,Palmeiras - SP,1 x 0 ,Corinthians - SP,Correto
-237,24,09/09/2018 - 16:00,Internacional - RS,1 x 0,Grêmio - RS,Correto
-238,24,09/09/2018 - 19:00,Paraná - PR,0 x 2,Santos - SP,Correto
-239,24,09/09/2018 - 19:00,Vitória - BA,1 x 0,Vasco da Gama - RJ,Correto
-240,24,10/09/2018 - 20:00,Atlético - MG,3 x 1,Atlético - PR,Correto
-241,25,15/09/2018 - 16:00,Ceará - CE,2 x 0,Vitória - BA,Correto
-242,25,15/09/2018 - 16:00,Grêmio - RS,2 x 0,Paraná - PR,Correto
-243,25,15/09/2018 - 19:00,Vasco da Gama - RJ,1 x 1,Flamengo - RJ,Correto
-244,25,16/09/2018 - 11:00,Botafogo - RJ,1 x 0,América - MG,Correto
-245,25,16/09/2018 - 16:00,Cruzeiro - MG,0 x 0,Atlético - MG,Correto
-246,25,16/09/2018 - 16:00,Atlético - PR,3 x 1,Fluminense - RJ,Correto
-247,25,16/09/2018 - 16:00,Bahia - BA,1 x 1,Palmeiras - SP,Correto
-248,25,16/09/2018 - 16:00,Santos - SP,0 x 0,São Paulo - SP,Correto
-249,25,16/09/2018 - 19:00,Corinthians - SP,2 x 1,Sport - PE,Correto
-250,25,17/09/2018 - 20:00,Chapecoense - SC,2 x 1,Internacional - RS,Correto
-251,26,22/09/2018 - 16:00,São Paulo - SP,1 x 1,América - MG,Correto
-252,26,23/09/2018 - 11:00,Grêmio - RS,3 x 2,Ceará - CE,Correto
-253,26,23/09/2018 - 16:00,Atlético - PR,3 x 0,Paraná - PR,Correto
-254,26,23/09/2018 - 16:00,Flamengo - RJ,2 x 1,Atlético - MG,Correto
-255,26,23/09/2018 - 16:00,Corinthians - SP,1 x 1,Internacional - RS,Correto
-256,26,23/09/2018 - 10:00,Vitória - BA,3 x 4,Botafogo - RJ,Correto
-257,26,23/09/2018 - 10:00,Sport - PE,0 x 1,Palmeiras - SP,Correto
-258,26,23/09/2018 - 19:00,Cruzeiro - MG,2 x 1,Santos - SP,Correto
-259,26,24/09/2018 - 20:00,Chapecoense - SC,1 x 2,Fluminense - RJ,Correto
-260,26,24/09/2018 - 20:00,Vasco da Gama - RJ,2 x 1,Bahia - BA,Correto
-261,27,29/09/2018 - 16:00,Fluminense - RJ,0 x 1,Grêmio - RS,Correto
-262,27,29/09/2018 - 19:00,América - MG,0 x 0,Corinthians - SP,Correto
-263,27,29/09/2018 - 21:00,Bahia - BA,0 x 0,Flamengo - RJ,Correto
-264,27,30/09/2018 - 11:00,Palmeiras - SP,3 x 1,Cruzeiro - MG,Correto
-265,27,30/09/2018 - 16:00,Atlético - MG,5 x 2,Sport - PE,Correto
-266,27,30/09/2018 - 16:00,Botafogo - RJ,2 x 2,São Paulo - SP,Correto
-267,27,30/09/2018 - 16:00,Santos - SP,1 x 0,Atlético - PR,Correto
-268,27,30/09/2018 - 16:00,Internacional - RS,2 x 1,Vitória - BA,Correto
-269,27,30/09/2018 - 19:00,Ceará - CE,3 x 1,Chapecoense - SC,Correto
-270,27,01/10/2018 - 20:00,Paraná - PR,1 x 1,Vasco da Gama - RJ,Correto
-271,28,24/10/2018 - 19:30,Cruzeiro - MG,0 x 2,Ceará - CE,Correto
-272,28,05/10/2018 - 19:00,Sport - PE,2 x 1,Internacional - RS,Correto
-273,28,05/10/2018 - 21:00,Corinthians - SP,0 x 3,Flamengo - RJ,Correto
-274,28,05/10/2018 - 21:50,Vitória - BA,0 x 1,Santos - SP,Correto
-275,28,06/10/2018 - 10:00,Atlético - PR,4 x 0,América - MG,Correto
-276,28,06/10/2018 - 10:00,Chapecoense - SC,1 x 0,Atlético - MG,Correto
-277,28,06/10/2018 - 10:00,São Paulo - SP,0 x 2,Palmeiras - SP,Correto
-278,28,06/10/2018 - 21:00,Grêmio - RS,2 x 2,Bahia - BA,Correto
-279,28,08/10/2018 - 20:00,Fluminense - RJ,4 x 0,Paraná - PR,Correto
-280,28,08/10/2018 - 21:00,Botafogo - RJ,1 x 1,Vasco da Gama - RJ,Correto
+`280,28,08/10/2018 - 21:00,Botafogo - RJ,1 x 1,Vasco da Gama - RJ,Correto
 281,29,13/10/2018 - 17:00,Flamengo - RJ,3 x 0,Fluminense - RJ,Correto
 282,29,13/10/2018 - 19:00,Santos - SP,1 x 0,Corinthians - SP,Correto
 283,29,13/10/2018 - 21:00,Bahia - BA,2 x 0,Paraná - PR,Correto
@@ -282,10 +103,14 @@ let jogadores =
 `;
 
 
+
 jogadores = jogadores.replace(/\n/g, ';');
 jogadores = jogadores.split(";");
 
 let SQL = '';
+let SqlGol = '';
+
+var clubeC = '';
 
 
 jogadores.map((jogaInfo, indexPai) => {
@@ -293,7 +118,7 @@ jogadores.map((jogaInfo, indexPai) => {
 
     jogaInfo.forEach((element,index) => {
         if (index === 0) {
-            SQL += "( ";
+            SQL += "(" + (indexPai + 280) + ',';
         }
 
         if (index === 2) {
@@ -306,148 +131,162 @@ jogadores.map((jogaInfo, indexPai) => {
 
         if (index === 3) {
 
-        let clube = element;
+        clubeC = element;
 
-        switch(clube) {
+        switch(clubeC) {
             case 'Atlético - MG' :
-                clube = 17218000000000;
+                clubeC = 17218000000000;
                 break;
             case 'Atlético - PR' :
-                clube = 76710600000000;
+                clubeC = 76710600000000;
                 break;
             case 'Bahia - BA' :
-                clube = 7525950000000;
+                clubeC = 7525950000000;
                     break;
             case 'Botafogo - RJ' :
-                clube = 34029600000000;
+                clubeC = 34029600000000;
                 break;
             case 'Ceará - CE' :
-                clube = 7369230000000;
+                clubeC = 7369230000000;
                     break;
             case 'Chapecoense - SC' :
-                clube = 83018800000000;
+                clubeC = 83018800000000;
                 break;
             case 'Corinthians - SP' :
-                clube = 61902700000000;
+                clubeC = 61902700000000;
                     break;
             case 'Cruzeiro - MG' :
-                clube = 17241900000000;
+                clubeC = 17241900000000;
                 break;
             case 'Flamengo - RJ' :
-                clube = 33649600000000;
+                clubeC = 33649600000000;
                     break;
             case 'Grêmio - RS' :
-                clube = 92797900000000;
+                clubeC = 92797900000000;
                 break;
             case 'Internacional - RS' :
-                clube = 105027000000;
+                clubeC = 105027000000;
                     break;
             case 'Palmeiras - SP' :
-                clube = 61750300000000;
+                clubeC = 61750300000000;
                 break;
             case 'Paraná - PR' :
-                clube = 81907400000000;
+                clubeC = 81907400000000;
                     break;
             case 'Santos - SP' :
-                clube = 58196700000000;
+                clubeC = 58196700000000;
                     break;
             case 'São Paulo - SP' :
-                clube = 60518000000000;
+                clubeC = 60518000000000;
                 break;
             case 'Sport - PE' :
-                clube = 58986100000000;
+                clubeC = 58986100000000;
                     break;
             case 'Vasco da Gama - RJ' :
-                clube = 33617500000000;
+                clubeC = 33617500000000;
                 break;
             case 'Vitória - BA' :
-                clube = 15217000000000;
+                clubeC = 15217000000000;
                     break;
             case 'América - MG' :
-                clube = 33014600000000;
+                clubeC = 33014600000000;
                     break;
             case 'Fluminense - RJ' :
-                clube = 33647600000000;
+                clubeC = 33647600000000;
                     break;
             default:
-                clube = 0; 
+                clubeC = 0; 
         }
 
-        SQL += clube + ','
+        SQL += clubeC + ','
 
         }
     
 
     if (index === 5) {
 
-        let clube = element;
+        clubeV = element;
 
-        switch(clube) {
+        switch(clubeV) {
             case 'Atlético - MG' :
-                clube = 17218000000000;
+                clubeV = 17218000000000;
                 break;
             case 'Atlético - PR' :
-                clube = 76710600000000;
+                clubeV = 76710600000000;
                 break;
             case 'Bahia - BA' :
-                clube = 7525950000000;
+                clubeV = 7525950000000;
                     break;
             case 'Botafogo - RJ' :
-                clube = 34029600000000;
+                clubeV = 34029600000000;
                 break;
             case 'Ceará - CE' :
-                clube = 7369230000000;
+                clubeV = 7369230000000;
                     break;
             case 'Chapecoense - SC' :
-                clube = 83018800000000;
+                clubeV = 83018800000000;
                 break;
             case 'Corinthians - SP' :
-                clube = 61902700000000;
+                clubeV = 61902700000000;
                     break;
             case 'Cruzeiro - MG' :
-                clube = 17241900000000;
+                clubeV = 17241900000000;
                 break;
             case 'Flamengo - RJ' :
-                clube = 33649600000000;
+                clubeV = 33649600000000;
                     break;
             case 'Grêmio - RS' :
-                clube = 92797900000000;
+                clubeV = 92797900000000;
                 break;
             case 'Internacional - RS' :
-                clube = 105027000000;
+                clubeV = 105027000000;
                     break;
             case 'Palmeiras - SP' :
-                clube = 61750300000000;
+                clubeV = 61750300000000;
                 break;
             case 'Paraná - PR' :
-                clube = 81907400000000;
+                clubeV = 81907400000000;
                     break;
             case 'Santos - SP' :
-                clube = 58196700000000;
+                clubeV = 58196700000000;
                     break;
             case 'São Paulo - SP' :
-                clube = 60518000000000;
+                clubeV = 60518000000000;
                 break;
             case 'Sport - PE' :
-                clube = 58986100000000;
+                clubeV = 58986100000000;
                     break;
             case 'Vasco da Gama - RJ' :
-                clube = 33617500000000;
+                clubeV = 33617500000000;
                 break;
             case 'Vitória - BA' :
-                clube = 15217000000000;
+                clubeV = 15217000000000;
                     break;
             case 'América - MG' :
-                clube = 33014600000000;
+                clubeV = 33014600000000;
                     break;
             case 'Fluminense - RJ' :
-                clube = 33647600000000;
+                clubeV = 33647600000000;
                     break;
             default:
-                clube = 0; 
+                clubeV = 0; 
         }
 
-        SQL += clube + ',';
+        SQL += clubeV + ',';
+
+
+
+
+        if (index === 5) {
+        let gols = jogaInfo[4];
+
+        let timeCasaGol = gols.split('x')[0].trim();
+        let timeVisitanteGol = gols.split('x')[1].trim();
+
+        SqlGol += "(" + (indexPai+280) + ',' + timeCasaGol + "," + clubeC + "),";
+        SqlGol += "(" + (indexPai +280) + ',' + timeVisitanteGol + "," + clubeV + "),";
+    
+        }
 
         }
 
@@ -526,4 +365,4 @@ jogadores.map((jogaInfo, indexPai) => {
     
 })
 
-console.log(SQL);
+console.log(SqlGol);
